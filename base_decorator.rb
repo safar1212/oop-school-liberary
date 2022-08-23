@@ -1,14 +1,12 @@
-require "./nameable.rb"
+require './nameable'
 
-class Base_Decorator < Nameable
+class BaseDecorator < Nameable
+  def initialize(nameable)
+    super()
+    @nameable = nameable
+  end
 
-    def initialize(nameable)
-        super()
-        @nameable = nameable
-    end
-
-    def correct_name
-        @nameable.correct_name[1..10]
-    end
-
+  def correct_name
+    @nameable.correct_name[1..10]
+  end
 end

@@ -1,13 +1,12 @@
-require "./base_decorator.rb"
+require './base_decorator'
 
-class Trimmer_Decorator < Base_Decorator
+class TrimmerDecorator < BaseDecorator
+  def initialize(nameable)
+    super()
+    @nameable = nameable
+  end
 
-    def initialize(nameable)
-        @nameable = nameable
-    end
-    
-    def correct_name
-        @nameable.correct_name
-    end
-    
+  def correct_name
+    @nameable.correct_name
+  end
 end
