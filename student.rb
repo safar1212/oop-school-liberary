@@ -1,5 +1,5 @@
 class Student < Person
-  def initialize(age, play_hooky, name: 'unknown', parent_permission: true, classroom: '10th')
+  def initialize(age, name: 'unknown', parent_permission: true, classroom: '10th')
     super(age, name, parent_permission)
     @classroom = classroom
     @play_hooky = play_hooky
