@@ -1,6 +1,6 @@
 require "./base_decorator.rb"
 
-class capitalize_decorator < base_decorator
+class Capitalize_Decorator < Base_Decorator
 
     def initialize(nameable)
         @nameable = nameable
