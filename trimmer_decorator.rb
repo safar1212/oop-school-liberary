@@ -1,0 +1,12 @@
+require "./base_decorator"
+
+class trimmer_decorator < base_decorator
+
+    def initialize(nameable)
+        @nameable = nameable
+    end
+    
+    def correct_name
+        @nameable.correct_name.
+    end
+end
