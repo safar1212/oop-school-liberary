@@ -1,4 +1,4 @@
-# enumerable
+# OOP-SCHOOL-LIBERARY
 
 ## Welcome! 👋
                               
@@ -8,7 +8,7 @@
 
 ## Functionalites 😄
 
-- You can add different codes and check them.
+- you can add people, teacher and students in the data.
 
 
 ## Getting Started 🙌
