@@ -1,17 +1,13 @@
-#!C:\Ruby31-x64\bin\env ruby
+#!C:\Ruby31-x64\bin\ruby.exe
 
-  def main
-    puts " please choose an option by entering a number"
-    puts " 1 - List all books"
-    puts " 2 - List all people"
-    puts " 3 - Create a person"
-    puts " 4 - Create a book"
-    puts " 5 - Create a rental"
-    puts " 6 - List all rentals for a given person id."
-    puts " 7 - Exit"
-  end
+require './app'
 
-  
-  
-  main()
-  
+def main
+  # puts "what's your name"
+  # name = gets.chomp
+  # puts "Hello #{name}, How're you?"
+  app = App.new
+  app.run
+end
+
+main
