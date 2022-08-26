@@ -44,9 +44,13 @@ class App
       create_rental
     when '6'
       list_all_rentals
-    else
+    when '7'
       puts 'Thanks for using this app ...'
       exit
+    else
+      puts "Select any option from 1 to 7"
+      puts " "
+      run_command
     end
   end
 
