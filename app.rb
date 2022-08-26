@@ -1,6 +1,7 @@
 require './person'
 require './book'
 require './classroom'
+require './nameable'
 require './rental'
 require './student'
 require './teacher'
@@ -84,13 +85,12 @@ class App
   def create_student
     print 'Age:'
     age = gets.chomp
-    print 'Classroom:'
-    classroom = gets.chomp
     print 'Name:'
     name = gets.chomp
     print 'Has parent permission? [Y/N]:'
     permission = gets.chomp
-    student = Student.new(age, classroom, name, parent_permission(permission))
+    student = Student.new(age, name, my_permission(permission))
+    puts student
     @people.push(student)
   end
 
@@ -111,6 +111,7 @@ class App
   def create_person
     puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]:'
     puts ''
+    person_type = gets.chomp
     case person_type
     when '1'
       create_student
@@ -118,6 +119,8 @@ class App
       create_teacher
     end
     puts 'Person created successfully'
+    puts " "
+    puts 'Press enter to continue ...'
     gets
     run_command
   end
@@ -129,6 +132,8 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     @my_books.push(book)
+    puts "Book created successfully"
+    puts ""
     run_command
   end
 
@@ -156,6 +161,7 @@ class App
     end
     me.rentals.each do |x|
       puts x.date
+      puts "Date: #{x.date} Book: #{x.book.title} Author: #{x.book.author}"
     end
     puts
     run_command
