@@ -29,6 +29,7 @@ class App
     gets.chomp
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def run_command
     run = show_menu
     case run
@@ -48,12 +49,13 @@ class App
       puts 'Thanks for using this app ...'
       exit
     else
-      puts "Select any option from 1 to 7"
-      puts " "
+      puts 'Select any option from 1 to 7'
+      puts ''
       run_command
     end
   end
 
+  # rubocop:enable Metrics/CyclomaticComplexity
   def list_books
     @my_books.each_with_index do |x, index|
       puts "#{index} Title: \"#{x.title}\", Author: #{x.author} "
