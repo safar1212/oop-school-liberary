@@ -119,7 +119,7 @@ class App
       create_teacher
     end
     puts 'Person created successfully'
-    puts " "
+    puts ' '
     puts 'Press enter to continue ...'
     gets
     run_command
@@ -132,8 +132,8 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     @my_books.push(book)
-    puts "Book created successfully"
-    puts ""
+    puts 'Book created successfully'
+    puts ''
     run_command
   end
 
