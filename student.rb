@@ -3,10 +3,10 @@ require './person'
 class Student < Person
   attr_reader :classroom
 
-  def initialize(age, classroom, name: 'unknown', parent_permission: true)
-    super(age, name, parent_permission)
+  def initialize(age, name, parent_permission, classroom = nil)
+    super(age, name, parent_permission: parent_permission)
     @classroom = classroom
-    @play_hooky = play_hooky
+    # @play_hooky = play_hooky
   end
 
   def play_hooky
