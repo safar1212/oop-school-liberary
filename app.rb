@@ -124,6 +124,7 @@ class App
     when '2'
       create_teacher
     end
+    puts ' '
     puts 'Person created successfully'
     puts ' '
     puts 'Press enter to continue ...'
