@@ -1,6 +1,6 @@
-require '../rental'
-require '../person'
-require '../book'
+require './rental'
+require './person'
+require './book'
 
 describe Rental do
   before :each do

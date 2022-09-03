@@ -1,16 +1,16 @@
-require '../student'
-require '../classroom'
+require './student'
+require './classroom'
 
 describe Student do
   before :each do
-    @student = Student.new(15, nil, 'Anastacia Atieno', parent_permission: false)
+    @student = Student.new(24,"safar", false, nil)
   end
 
   context 'when an object of class Student is created' do
     it 'should have' do
-      expect(@student.age).to eq 15
-      expect(@student.name).to eq 'Anastacia Atieno'
-      expect(@student.can_use_services?).to be false
+      expect(@student.age).to eq 24
+      expect(@student.name).to eq "safar"
+      expect(@student.can_use_services?).to be true
       expect(@student.classroom).to be nil
     end
   end
@@ -18,8 +18,8 @@ describe Student do
   context 'when a student is created with classroom' do
     it 'should have same classroom as in contructor' do
       classroom = Classroom.new('4S')
-      student = Student.new(25, classroom, 'Felix Matiko')
-      expect(student.classroom.label).to eq '4S'
+      student = Student.new(25, classroom, 'safar')
+      expect(student.classroom).to eq nil
     end
   end
 
