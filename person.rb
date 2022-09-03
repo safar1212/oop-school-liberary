@@ -1,4 +1,6 @@
 require './nameable'
+require './rental'
+require './book'
 
 class Person < Nameable
   attr_accessor :name, :age, :id, :rentals
@@ -20,9 +22,8 @@ class Person < Nameable
     @name
   end
 
-  def add_rental(rental)
-    @rentals.push(rental)
-    rental.person = self
+  def add_rental(date, book)
+    Rental.new(date, self, book)
   end
 
   private
