@@ -5,14 +5,14 @@ require './nameable'
 require './rental'
 require './student'
 require './teacher'
-require './loadData'
-require './saveData'
+require './load_data'
+require './save_data'
 
 class App
-  def initialize()
-    @my_books = loadData.load_books
-    @my_rentals = loadData.load_rentals(@my_books, @people)
-    @people = loadData.load_people
+  def initialize
+    @my_books = LoadData.load_books
+    @my_rentals = LoadData.load_rentals(@my_books, @people)
+    @people = LoadData.load_people
   end
 
   def show_menu
@@ -49,7 +49,7 @@ class App
     when '7'
       puts 'Thanks for using this app ...'
       SaveData.save(@my_books, @people, @my_rentals)
-      puts "The data have been saved."
+      puts 'The data have been saved.'
       exit
     else
       puts 'Select any option from 1 to 7'
