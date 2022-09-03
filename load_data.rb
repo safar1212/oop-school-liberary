@@ -17,8 +17,7 @@ class LoadData
       person = if record['type'] == 'Student'
                  Student.new(record['age'],
                              record['name'],
-                             parent_permission: record['parent_permission'],
-                             nil)
+                             parent_permission: record['parent_permission'])
                else
                  Teacher.new(record['age'], '', record['name'])
                end
