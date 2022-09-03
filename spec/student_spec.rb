@@ -3,13 +3,13 @@ require './classroom'
 
 describe Student do
   before :each do
-    @student = Student.new(24,"safar", false, nil)
+    @student = Student.new(24, 'safar', false, nil)
   end
 
   context 'when an object of class Student is created' do
     it 'should have' do
       expect(@student.age).to eq 24
-      expect(@student.name).to eq "safar"
+      expect(@student.name).to eq 'safar'
       expect(@student.can_use_services?).to be true
       expect(@student.classroom).to be nil
     end
